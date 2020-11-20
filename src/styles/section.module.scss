@@ -1,0 +1,156 @@
+.container {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rightSide {
+  position: relative;
+  margin-top: 16.01vh;
+  margin-right: 14.37%;
+}
+
+.leftSide {
+  margin-top: 16.01vh;
+  margin-left: 13.33vw;
+}
+
+.heroImage {
+  width: 100%;
+  object-fit: contain;
+}
+
+.bgImage {
+  position: absolute;
+  width: 28.19vw;
+  object-fit: contain;
+  right: 0;
+  top: 0;
+}
+
+.catchword {
+  font-weight: bold;
+  font-size: 48px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #e4e3e3;
+}
+
+.heroDecorImage {
+  display: block;
+  position: absolute;
+  right: -90px;
+  top: -20px;
+}
+
+.button {
+  position: absolute;
+  border: none;
+  bottom: -73px;
+  left: -30px;
+  border-radius: 4px;
+  background-color: #ab528d;
+  color: #ffffff;
+  width: 146px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1200px) {
+  .catchword {
+    font-size: 40px;
+  }
+  .leftSide {
+    margin-left: 8vw;
+  }
+  .button {
+    left: -15px;
+    width: 90px;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .catchword {
+    font-size: 32px;
+  }
+  .button {
+    left: 0px;
+  }
+  .rightSide {
+    margin-top: 8vh;
+    margin-right: 6vw;
+  }
+  .leftSide {
+    margin-top: 8vh;
+    margin-left: 4vw;
+  }
+  .heroDecorImage {
+    width: 65px;
+    right: -15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .catchword {
+    font-size: 32px;
+  }
+  .button {
+    width: 80px;
+    height: 30px;
+    bottom: -5vh;
+  }
+  .rightSide {
+    margin-top: 5vh;
+    margin-right: 6vw;
+    padding-bottom: 20px;
+  }
+  .leftSide {
+    margin-top: 7vh;
+    margin-left: 0;
+    width: 45%;
+  }
+  .heroDecorImage {
+    width: 65px;
+    right: -15px;
+  }
+}
+
+@media only screen and (max-width: 420px) and (orientation: portrait) {
+  .container {
+    flex-direction: column;
+  }
+  .catchword {
+    font-size: 30px;
+  }
+  .button {
+    width: 130px;
+    font-size: 14px;
+    height: 36px;
+    bottom: 0;
+    left: -25px;
+  }
+  .rightSide {
+    margin-top: 5vh;
+    margin-right: 6vw;
+    padding-bottom: 10vh;
+  }
+  .leftSide {
+    margin-top: 4vh;
+    width: 55%;
+  }
+  .heroDecorImage {
+    width: 65px;
+    right: -25px;
+  }
+}

@@ -1,0 +1,99 @@
+.logo {
+  position: absolute;
+  top: 1.28vh;
+  left: 3.96vw;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #e4e3e3;
+  z-index: 5;
+}
+
+.cartBox {
+  position: absolute;
+  top: 1.13vh;
+  right: 6.73vw;
+  z-index: 5;
+  transition: all 0.5s;
+}
+
+.cartBox:hover {
+  cursor: pointer;
+  animation: swing 1s ease;
+  animation-iteration-count: 1;
+}
+
+@keyframes swing {
+  15% {
+    transform: translateX(3px);
+  }
+  30% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  65% {
+    transform: translateX(-2px);
+  }
+  80% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+%counterStyles {
+  position: absolute;
+  display: block;
+  text-align: center;
+  top: 8px;
+  right: -2px;
+  width: 12px;
+  height: 13px;
+  line-height: 13px;
+
+  color: #ffffff;
+  font-size: 8px;
+  border-radius: 50%;
+}
+
+.counter {
+  background-color: #301346;
+  @extend %counterStyles;
+}
+
+.openCounter {
+  background-color: #ab528d;
+  @extend %counterStyles;
+}
+
+%cartArrowStyles {
+  position: absolute;
+  display: block;
+  text-align: center;
+  top: 6px;
+  right: -15px;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 50%;
+  transition: all 0.4s ease-out;
+}
+
+.cartArrow {
+  transform: rotate(90deg);
+  @extend %cartArrowStyles;
+}
+
+.cartArrowRotate {
+  transform: rotate(-90deg);
+  @extend %cartArrowStyles;
+}
+
+@media only screen and (max-width: 420px) and (orientation: portrait) {
+  .logo {
+    font-size: 17px;
+  }
+}
